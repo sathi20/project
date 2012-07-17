@@ -1,0 +1,10 @@
+<h1> users#edit </h1>
+<%= form_for @users do |u| %>
+<%= u.label :name %>
+<%= u.text_field :name %>
+
+<%= u.label :email %>
+<%= u.text_field :email %>
+</br>
+<%= u.submit %>
+<% end %>
