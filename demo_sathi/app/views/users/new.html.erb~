@@ -1,5 +1,5 @@
 <%= form_for @users do |u| %>
-<%= error_messages_for :user %>
+<%= error_messages_for :users %>
 <%= u.label :username %>
 <%= u.text_field :username %>
 </br>
