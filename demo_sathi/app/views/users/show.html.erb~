@@ -16,11 +16,10 @@
 </br></br>
 <%= link_to "create Post", new_user_post_path(@user) %>
 <%= link_to "index",users_path %>
-<ul>
 
-  <% @posts.each do|p| %>
-  <li>
-    <%= link_to p.title, user_post_path(@user, p) %>
-  </li>
+  <% @user.posts.each do|p| %>
+  
+    <%= link_to p.title, user_post_path(@user,post) %>
+  
   <% end %>
-</ul>
+
