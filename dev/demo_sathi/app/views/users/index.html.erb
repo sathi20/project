@@ -1,0 +1,18 @@
+<h1>users#index</h1>
+<ul>
+<% @users.each do |u| %>
+<li>
+<%= u.username %>  
+<%= u.email%>
+<%= u.first_name%>
+<%= u.last_name%>
+<%= u.full_name%>
+<%= u.contact%>
+<%= u.user_type%>
+	<%= link_to "Show", user_path(u) %> 
+	<%= link_to "Delete", user_path(u),:method=>:delete %> 
+	<%= link_to "Edit", edit_user_path(u) %>
+</li>
+<% end %>
+</ul>
+<%= link_to "Create User",new_user_path %>
