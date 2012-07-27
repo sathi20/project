@@ -2,13 +2,51 @@
 <html>
 <head>
   <title>DemoSathi</title>
+<head>
+<style type="text/css">
+body{background-color:aquamarine;}
+#demo{float:right;margin-right:900px;}
+p{color:red;}
+#end{clear:both;margin:10px;border-top:1px dashed #999999;}
+.items{
+float:left;
+border-left:1px solid #000000;
+padding:0 15px;
+
+}	
+#last
+{
+
+list-style-type:none;float:right;margin-top:150px;
+
+}
+</style>
+</head> 
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<header>
+<%= image_tag "rails.png" %>
+<p id="demo">demo_sathi</p></br></br></br>
+</header>
 <%= yield %>
+<footer>
+<ul id="last">
+
+<li class="items">
+<a href="">home</a>
+</li>
+
+<li class="items"><a href="">about</a>
+</li>
+
+<li class="items"><a href="">idea</a>
+</li>
+
+</ul>
+</footer>
 
 </body>
 </html>

@@ -1,8 +1,21 @@
 class UsersController < ApplicationController
   def create
-    User.create!(params[:user])
-    redirect_to users_path
+    @user = User.new(params[:user])
+    
+    
+    if @user.save!
+      # Tell the UserMailer to send a welcome Email after save
+      UserMailer.welcome_email(@user).deliver
+      
+      redirect_to(@user, :notice => 'User was successfully created.')
+      
+      
+      
+    else
+      redirect_to users_path
+    end
   end
+  
   def new
     @users=User.new
   end

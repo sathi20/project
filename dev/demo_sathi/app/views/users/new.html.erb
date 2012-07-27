@@ -1,24 +1,24 @@
 <%= form_for @users do |u| %>
-<%= u.label :username %>
-<%= u.text_field :username %>
-</br>
-<%= u.label :email %>
-<%= u.text_field :email %></br>
-<%= u.label :first_name %>
-<%= u.text_field :first_name %></br>
+<table>
+<tr><td><%= u.label :username %></td>
+<td><%= u.text_field :username %></td></tr>
+<tr><td><%= u.label :email %></td>
+<td><%= u.text_field :email %></td></tr>
+<tr><td><%= u.label :first_name %></td>
+<td><%= u.text_field :first_name %></td></tr>
 
-<%= u.label :last_name %>
-<%= u.text_field :last_name %></br>
+<tr><td><%= u.label :last_name %></td>
+<td><%= u.text_field :last_name %></td></tr>
 
-<%= u.label :full_name %>
-<%= u.text_field :full_name %></br>
+<tr><td><%= u.label :full_name %></td>
+<td><%= u.text_field :full_name %></td></tr>
 
-<%= u.label :user_type %>
-<%= u.text_field :user_type %></br>
+<tr><td><%= u.label :user_type %></td>
+<td><%= u.text_field :user_type %></td></tr>
 
-<%= u.label :contact %>
-<%= u.text_field :contact %>
-
+<tr><td><%= u.label :contact %></td>
+<td><%= u.text_field :contact %></td></tr>
+</table>
 <%= u.submit %>
 <% end %>
 

@@ -3,7 +3,7 @@
 <% @users.each do |u| %>
 <li>
 </br>
-<%= u.username %> </br>
+<%= u.username %> </br><>
 <%= u.email%>
 <%= u.first_name%>
 <%= u.last_name%>
